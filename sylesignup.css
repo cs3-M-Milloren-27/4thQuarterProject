@@ -1,0 +1,49 @@
+body{
+    background-image: url(babie.svg);
+    background-repeat: no-repeat;
+    background-position:top;
+    background-size: cover;
+    padding: 0;
+    margin:0;
+}
+
+.titn{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -980;   
+    background-color: rgba(11, 44, 51, 0.5);
+}
+#aba{
+		margin-right:auto;
+		margin-left:auto;
+}
+#login{
+		color:#035550;
+    font-family: "Teachers", sans-serif;
+		width: 25%;
+		margin-top: 3%;
+		margin-left: auto;
+		margin-right: auto;
+}
+#feldse{
+		color:#035550;
+		border-radius: 5px;
+		border: 2px solid white;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		background-color:white;
+}
+	
+input{
+		border-color:#035550;
+}
+
+a{
+    text-decoration: none;
+    color: #035550;
+}

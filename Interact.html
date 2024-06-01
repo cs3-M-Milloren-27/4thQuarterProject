@@ -1,0 +1,604 @@
+<DOCTYPE html>
+<html>
+<head>
+    <title> Genetic  </title >
+    <meta charset="maan:3">
+    <link rel="stylesheet" type="text/css" href="inetact.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <section>
+    <nav>
+        <ul> 
+            <a href="about.html"><li class="navButton">About us</li></a>
+            <a class="active" href="Interact.html"><li class="navButton">Interactive page</li></a>
+            <a href="Home.html"><li class="navButton">Home</li></a>
+        </ul>
+    </nav>
+    </section>
+    
+    <section class="aaa" id="imgonnad">
+        <form>
+            <h1>Make a baby!</h1>
+            <div class="parent1">
+                <h1>Parent one</h1>
+
+                <label for="eye">Choose an eye color:</label>
+                <select id="eyecolor1" name="eyelist">
+                    <option value="eblack">black</option>
+                    <option value="ebrown">brown</option>
+                    <option value="eblue">blue</option>
+                </select>
+                <br><br>
+                <label for="eye">Recesive eye color:</label>
+                <select id="reyecolor1" name="eyelist">
+                    <option value="none">none</option>
+                    <option value="eblack">black</option>
+                    <option value="ebrown">brown</option>
+                    <option value="eblue">blue</option>
+                </select>
+                <br><br>
+                
+                <label for="hair">Choose a hair color:</label>
+                <select id="haircolor1" name="hairlist">
+                    <option value="hblack">black</option>
+                    <option value="hbrown">brown</option>
+                    <option value="hblonde">blonde</option>
+                </select> 
+                <br><br> 
+                <label for="hair">recesive hair color:</label>
+                <select id="rhaircolor1" name="hairlist">
+                    <option value="none">none</option>
+                    <option value="hblack">black</option>
+                    <option value="hbrown">brown</option>
+                    <option value="hblonde">blonde</option>
+                </select> 
+                <br><br>  
+                
+                <label for="skin">Choose a skin color:</label>
+                <select id="skincolor1" name="skinlist">
+                    <option value="sblack">black</option>
+                    <option value="slight">light skin</option>
+                    <option value="swhite">white</option>
+                </select>                    
+                <br><br>
+                <label for="skin">recesive skin color:</label>
+                <select id="rskincolor1" name="skinlist">
+                    <option value="none">none</option>
+                    <option value="sblack">black</option>
+                    <option value="slight">light skin</option>
+                    <option value="swhite">white</option>
+                </select>                    
+                <br><br>
+                
+            </div>
+            <div class="parent2">
+                <h1>Parent two</h1>
+
+                <label for="eye">Choose an eye color:</label>
+                <select id="eyecolor2" name="eyelist">
+                    <option value="eblack">black</option>
+                    <option value="ebrown">brown</option>
+                    <option value="eblue">blue</option>
+                </select>
+                <br><br>
+                <label for="eye">Recesive eye color:</label>
+                <select id="reyecolor2" name="eyelist">
+                    <option value="none">none</option>
+                    <option value="eblack">black</option>
+                    <option value="ebrown">brown</option>
+                    <option value="eblue">blue</option>
+                </select>
+                <br><br>
+
+                <label for="hair">Choose a hair color:</label>
+                <select id="haircolor2" name="hairlist">
+                    <option value="hblack">black</option>
+                    <option value="hbrown">brown</option>
+                    <option value="hblonde">blonde</option>
+                </select> 
+                <br><br>
+                <label for="hair">recesive hair color:</label>
+                <select id="rhaircolor2" name="hairlist">
+                    <option value="none">none</option>
+                    <option value="hblack">black</option>
+                    <option value="hbrown">brown</option>
+                    <option value="hblonde">blonde</option>
+                </select> 
+                <br><br>  
+                
+                <label for="skin">Choose a skin color:</label>
+                <select id="skincolor2" name="skinlist">
+                    <option value="sblack">black</option>
+                    <option value="slight">light skin</option>
+                    <option value="swhite">white</option>
+                </select>
+                <br><br>
+                <label for="skin">recesive skin color:</label>
+                <select id="rskincolor2" name="skinlist">
+                    <option value="none">none</option>
+                    <option value="sblack">black</option>
+                    <option value="slight">light skin</option>
+                    <option value="swhite">white</option>
+                </select>                    
+                <br><br>
+            </div>
+            <center><input onclick="makebb()" type="submit"></center>        
+        </form>
+    </section>
+    <section class="aaa" id="ueue">
+        <h1>result</h1>        
+        <div id="result">
+            Disclaimer! This simulator does not really show how real life genetics work and is just a fun simulator sample for this website. 
+        </div>
+    </section>
+    
+</body>
+</html>
+    
+<script>
+    function makebb(){
+        event.preventDefault()
+        
+        //normal
+        var ecolor1= document.getElementById("eyecolor1").value;
+        var hcolor1= document.getElementById("haircolor1").value;
+        var scolor1= document.getElementById("skincolor1").value;
+        var ecolor2= document.getElementById("eyecolor2").value;
+        var hcolor2= document.getElementById("haircolor2").value;
+        var scolor2= document.getElementById("skincolor2").value;
+        
+        var recolor1= document.getElementById("reyecolor1").value;
+        var rhcolor1= document.getElementById("rhaircolor1").value;
+        var rscolor1= document.getElementById("rskincolor1").value;
+        var recolor2= document.getElementById("reyecolor2").value;
+        var rhcolor2= document.getElementById("rhaircolor2").value;
+        var rscolor2= document.getElementById("rskincolor2").value;
+        
+        //imgonnacry
+        var eyeblack = "eblack";
+        var eyeblue = "eblue";
+        var eyebrown = "ebrown";
+        var eyecolor = "";
+        
+        var hairblack = "hblack";
+        var hairblonde = "hblonde";
+        var hairbrown = "hbrown";
+        var haircolor = ""
+        
+        var skinblack = "sblack";
+        var skinlight = "slight";
+        var skinwhite = "swhite";
+        var skincolor = ""
+        
+        //counters
+        var origeye=50;
+        var orighair=50;
+        var origskin=50;
+        
+        var bluee=0;
+        var blacke=0;
+        var browne=0;
+        var blondeh=0;
+        var blackh=0;
+        var brownh=0;
+        var blacks=0;
+        var lights=0;
+        var whites=0;
+        
+        var rbluee=0;
+        var rblacke=0;
+        var rbrowne=0;
+        var rblondeh=0;
+        var rblackh=0;
+        var rbrownh=0;
+        var rblacks=0;
+        var rlights=0;
+        var rwhites=0;
+        
+        {
+        //foreyecolor
+        if (ecolor1 === eyeblue) {
+            bluee += 50;
+        }   
+        if (ecolor2 === eyeblue) {
+            bluee += 50;
+        }  
+        if (ecolor1 === eyebrown) {
+            browne += 50;
+        }   
+        if (ecolor2 === eyebrown) {
+            browne += 50;
+        }   
+        if (ecolor1 === eyeblack) {
+            blacke += 50;
+        }   
+        if (ecolor2 === eyeblack) {
+            blacke += 50;
+        }
+
+        //determine eye color
+
+        if (bluee === 100) {
+            eyecolor = "blue";
+        }  
+        else if (browne === 100) {
+            eyecolor = "brown";            
+        } 
+        else if (blacke === 100) {
+            eyecolor = "black";            
+        } 
+        else if (blacke === 50 && bluee === 50) {
+            const decide = Math.round(Math.random());
+            if (decide === 1) {
+                eyecolor = "black";
+            } else {
+                eyecolor = "blue";
+            }
+        } 
+        else if (browne === 50 && bluee === 50) {
+            const decide = Math.round(Math.random());
+            if (decide === 1) {
+                eyecolor = "blue";
+            } else {
+                eyecolor = "brown";
+            }
+        } 
+        else if (blacke === 50 && browne === 50) {
+            const decide = Math.round(Math.random());
+            if (decide === 1) {
+                eyecolor = "black";
+            } else {
+                eyecolor = "brown";
+            }
+        }
+        
+        //forhaircolor
+        if (hcolor1 === hairblonde) {
+            blondeh += 50;
+        }   
+        if (hcolor2 === hairblonde) {
+            blondeh += 50;
+        }  
+        if (hcolor1 === hairbrown) {
+            brownh += 50;
+        }   
+        if (hcolor2 === hairbrown) {
+            brownh += 50;
+        }   
+        if (hcolor1 === hairblack) {
+            blackh += 50;
+        }   
+        if (hcolor2 === hairblack) {
+            blackh += 50;
+        }
+
+        //determine hair color
+
+        if (blondeh === 100) {
+            haircolor = "blonde";
+        }  
+        else if (brownh === 100) {
+            haircolor = "brown";            
+        } 
+        else if (blackh === 100) {
+            haircolor = "black";            
+        } 
+        else if (blackh === 50 && blondeh === 50) {
+            const decide2 = Math.round(Math.random());
+            if (decide2 === 1) {
+                haircolor = "black";
+            } else {
+                haircolor = "blonde";
+            }
+        } 
+        else if (brownh === 50 && blondeh === 50) {
+            const decide2 = Math.round(Math.random());
+            if (decide2 === 1) {
+                haircolor = "blonde";
+            } else {
+                haircolor = "brown";
+            }
+        } 
+        else if (blackh === 50 && brownh === 50) {
+            const decide2 = Math.round(Math.random());
+            if (decide2 === 1) {
+                haircolor = "black";
+            } else {
+                haircolor = "brown";
+            }
+        }  
+        
+        
+        //forskincolor
+        if (scolor1 === skinwhite) {
+            whites += 50;
+        }   
+        if (scolor2 === skinwhite) {
+            whites += 50;
+        }  
+        if (scolor1 === skinlight) {
+            lights += 50;
+        }   
+        if (scolor2 === skinlight) {
+            lights += 50;
+        }   
+        if (scolor1 === skinblack) {
+            blacks += 50;
+        }   
+        if (scolor2 === skinblack) {
+            blacks += 50;
+        }
+
+        //determine hair color
+
+        if (whites === 100) {
+            skincolor = "white";
+        }  
+        else if (lights === 100) {
+            skincolor = "light skin";            
+        } 
+        else if (blacks === 100) {
+            skincolor = "black";            
+        } 
+        else if (blacks === 50 && whites === 50) {
+            const decide3 = Math.round(Math.random());
+            if (decide3 === 1) {
+                skincolor = "black";
+            } else {
+                skincolor = "white";
+            }
+        } 
+        else if (lights === 50 && whites === 50) {
+            const decide3 = Math.round(Math.random());
+            if (decide3 === 1) {
+                skincolor = "white";
+            } else {
+                skincolor = "light skin";
+            }
+        } 
+        else if (blacks === 50 && lights === 50) {
+            const decide3 = Math.round(Math.random());
+            if (decide3 === 1) {
+                skincolor = "black";
+            } else {
+                skincolor = "light skin";
+            }
+        } 
+        }
+        
+        
+        //foreyecolor
+        if (recolor1 === eyeblue) {
+            rbluee += 25;
+        }   
+        if (recolor2 === eyeblue) {
+            rbluee += 25;
+        }  
+        if (recolor1 === eyebrown) {
+            rbrowne += 25;
+        }   
+        if (recolor2 === eyebrown) {
+            rbrowne += 25;
+        }   
+        if (recolor1 === eyeblack) {
+            rblacke += 25;
+        }   
+        if (recolor2 === eyeblack) {
+            rblacke += 25;
+        }
+
+        //determine eye color
+        
+        if (bluee !== 100 && blacke !== 100 && browne !== 100){            
+            if (origeye === rbluee){      
+                const rdecide = Math.round(Math.random());          
+                if (rdecide === 1) {
+                    eyecolor === eyecolor;
+                } else {
+                    eyecolor = "blue";
+                }
+            }
+            if (origeye === rblacke){      
+                const rdecide = Math.round(Math.random());          
+                if (rdecide === 1) {
+                    eyecolor === eyecolor;
+                } else {
+                    eyecolor = "black";
+                }
+            }
+            if (origeye === rbrowne){      
+                const rdecide = Math.round(Math.random());          
+                if (rdecide === 1) {
+                    eyecolor === eyecolor;
+                } else {
+                    eyecolor = "brown";
+                }
+            }
+            else {
+                if (rbluee === 25){  
+                const rdecide =  Math.round(Math.random()*100);          
+                    if (rdecide>25){
+                        eyecolor === eyecolor;
+                    } else {
+                        eyecolor = "blue";
+                    }
+                    }
+                if (rblacke === 25){  
+                    const rdecide =  Math.round(Math.random()*100);          
+                        if (rdecide>25) {
+                            eyecolor === eyecolor;
+                        } else {
+                            eyecolor = "black";
+                        }
+                    }
+                if (rbrowne === 25){  
+                    const rdecide =  Math.round(Math.random()*100);          
+                        if (rdecide>25) {
+                            eyecolor === eyecolor;
+                        } else {
+                            eyecolor = "brown";
+                        }
+                    }
+                }
+        }
+        
+        //forhaircolor
+        if (rhcolor1 === hairblonde) {
+            rblondeh += 25;
+        }   
+        if (rhcolor2 === hairblonde) {
+            rblondeh += 25;
+        }  
+        if (rhcolor1 === hairbrown) {
+            rbrownh += 25;
+        }   
+        if (rhcolor2 === hairbrown) {
+            rbrownh += 25;
+        }   
+        if (rhcolor1 === hairblack) {
+            rblackh += 25;
+        }   
+        if (rhcolor2 === hairblack) {
+            rblackh += 25;
+        }
+
+        //determine hair color
+        
+        if (blondeh !== 100 && blackh !== 100 && brownh !== 100){            
+            if (orighair === rblondeh){      
+                const rdecide1 = Math.round(Math.random());          
+                if (rdecide1 === 1) {
+                    haircolor === haircolor;
+                } else {
+                    haircolor = "blonde";
+                }
+            }
+            if (orighair === rblackh){      
+                const rdecide1 = Math.round(Math.random());          
+                if (rdecide1 === 1) {
+                    haircolor === haircolor;
+                } else {
+                    haircolor = "black";
+                }
+            }
+            if (orighair === rbrownh){      
+                const rdecide1 = Math.round(Math.random());          
+                if (rdecide1 === 1) {
+                    haircolor === haircolor;
+                } else {
+                    haircolor = "brown";
+                }
+            }
+            else {
+                if (rblondeh === 25){  
+                const rdecide1 =  Math.round(Math.random()*100);          
+                    if (rdecide1>25){
+                        haircolor === haircolor;
+                    } else {
+                        haircolor = "blonde";
+                    }
+                    }
+                if (rblackh === 25){  
+                    const rdecide1 =  Math.round(Math.random()*100);          
+                        if (rdecide1>25) {
+                            haircolor === haircolor;
+                        } else {
+                            haircolor = "black";
+                        }
+                    }
+                if (rbrownh === 25){  
+                    const rdecide1 =  Math.round(Math.random()*100);          
+                        if (rdecide1>25) {
+                            haircolor === haircolor;
+                        } else {
+                            haircolor = "blonde";
+                        }
+                    }
+                }
+        }
+        
+        //forskincolor
+        if (rscolor1 === skinwhite) {
+            rwhites += 25;
+        }   
+        if (rhcolor2 === skinwhite) {
+            rwhites += 25;
+        }  
+        if (rscolor1 === skinlight) {
+            rlights  += 25;
+        }   
+        if (rhcolor2 === skinlight) {
+            rlights  += 25;
+        }   
+        if (rscolor1 === skinblack) {
+            rblacks += 25;
+        }   
+        if (rhcolor2 === skinblack) {
+            rblacks += 25;
+        }
+
+        //determine eye color
+        
+        if (whites !== 100 && blacks !== 100 && lights !== 100){            
+            if (origskin === rwhites){      
+                const rdecide2 = Math.round(Math.random());          
+                if (rdecide2 === 1) {
+                    skincolor === skincolor;
+                } else {
+                    skincolor = "white";
+                }
+            }
+            if (origskin === rblacks){      
+                const rdecide2 = Math.round(Math.random());          
+                if (rdecide2 === 1) {
+                    skincolor === skincolor;
+                } else {
+                    skincolor = "black";
+                }
+            }
+            if (origskin === rlights ){      
+                const rdecide2 = Math.round(Math.random());          
+                if (rdecide2 === 1) {
+                    skincolor === skincolor;
+                } else {
+                    skincolor = "light skin";
+                }
+            }
+            
+            else {
+                if (rwhites === 25){  
+                const rdecide2 =  Math.round(Math.random()*100);          
+                    if (rdecide2>25){
+                        skincolor === skincolor;
+                    } else {
+                        skincolor = "white";
+                    }
+                    }
+                if (rblacks === 25){  
+                    const rdecide2 =  Math.round(Math.random()*100);          
+                        if (rdecide2>25) {
+                            skincolor === skincolor;
+                        } else {
+                            skincolor = "black";
+                        }
+                    }
+                if (rlights  === 25){  
+                    const rdecide2 =  Math.round(Math.random()*100);          
+                        if (rdecide2>25) {
+                            skincolor === skincolor;
+                        } else {
+                            skincolor = "light skin";
+                        }
+                    }
+                }
+        }
+        
+        document.getElementById("result").innerHTML="the childs' eye color is " + eyecolor + "<br>the childs' hair color is " + haircolor + "<br>the childs' skin color is " + skincolor  ;
+    }
+</script>
